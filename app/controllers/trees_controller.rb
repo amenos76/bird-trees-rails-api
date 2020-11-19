@@ -32,11 +32,6 @@ class TreesController < ApplicationController
          render status: 204
      end
 
-     def create_bird_through_tree
-        @tree = Tree.find(params[:id])
-        @bird = @tree.birds.create({name: params[:name], is_pokemon: params[:is_pokemon]})
-        
-        render json: {bird: @bird}
-    end
+    
 
 end
